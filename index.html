@@ -1,0 +1,19 @@
+  <!DOCTYPE html>
+<html lang="nl">
+<head>
+    <script src="https://res.cdn.office.net/teams-js/2.19.0/js/MicrosoftTeams.min.js"></script>
+    <style>
+        body, html, iframe { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+    </style>
+</head>
+<body>
+    <script>
+        // Initialiseer de Teams SDK
+        microsoftTeams.app.initialize().then(() => {
+            // Zodra Teams klaar is, sturen we de iFrame door naar Smartschool
+            document.getElementById('smartschool-frame').src = "https://jouwschool.smartschool.be";
+        });
+    </script>
+    <iframe id="smartschool-frame" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+</body>
+</html>
